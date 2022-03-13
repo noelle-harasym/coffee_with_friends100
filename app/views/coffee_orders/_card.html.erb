@@ -7,12 +7,20 @@
     <dl class="mb-1">
       <dt>User</dt>
       <!-- Display user_id start -->
-      <dd><%= coffee_order.user_id %></dd>
+      <dd>
+        <% if @coffee_order.user.present? %>
+          <%= link_to coffee_order.user, coffee_order.user %>
+        <% end %>
+      </dd>
       <!-- Display user_id end -->
 
       <dt>Coffee type</dt>
       <!-- Display coffee_type_id start -->
-      <dd><%= coffee_order.coffee_type_id %></dd>
+      <dd>
+        <% if @coffee_order.coffee_type.present? %>
+          <%= link_to coffee_order.coffee_type, coffee_order.coffee_type %>
+        <% end %>
+      </dd>
       <!-- Display coffee_type_id end -->
 
       <dt>Cafe</dt>
@@ -22,7 +30,11 @@
 
       <dt>Dairy type</dt>
       <!-- Display dairy_type_id start -->
-      <dd><%= coffee_order.dairy_type_id %></dd>
+      <dd>
+        <% if @coffee_order.dairy_type.present? %>
+          <%= link_to coffee_order.dairy_type, coffee_order.dairy_type %>
+        <% end %>
+      </dd>
       <!-- Display dairy_type_id end -->
 
       <dt>Modifications other</dt>
