@@ -1,6 +1,6 @@
 ActiveAdmin.register CoffeeOrder do
-
- permit_params :user_id, :coffee_type_id, :cafe, :dairy_type_id, :modifications_other, :iced, :picture, :date, :rating
+  permit_params :user_id, :coffee_type_id, :cafe, :dairy_type_id,
+                :modifications_other, :iced, :picture, :date, :rating
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -14,5 +14,4 @@ ActiveAdmin.register CoffeeOrder do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
 end
